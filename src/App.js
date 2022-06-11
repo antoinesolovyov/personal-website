@@ -1,7 +1,13 @@
 import React from 'react'
+import Header from './components/Header/header'
+import Grid from './components/Grid/grid'
+import './app.css'
 
 const App = () => (
-  <div>Hello, personal website!</div>
+  <>
+    <Header />
+    <Grid />
+  </>
 )
 
 export default React.memo(App)
