@@ -1,12 +1,17 @@
 import React from 'react'
-import Header from './components/Header/header'
-import Grid from './components/Grid/grid'
-import './app.css'
+import Header from './components/Header/Header'
+import './App.css'
+import { Route, Routes } from 'react-router-dom'
+import Photos from './components/Photos/Photos'
+import Main from './components/Main/Main'
 
 const App = () => (
   <>
     <Header />
-    <Grid />
+    <Routes>
+      <Route path="/" element={<Main />} />
+      <Route path="/photos" element={<Photos />} />
+    </Routes>
   </>
 )
 

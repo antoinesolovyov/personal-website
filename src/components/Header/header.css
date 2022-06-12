@@ -21,6 +21,7 @@ ul {
 nav li {
   display: inline;
   margin-right: 20px;
+  font-size: 16px;
 }
 
 li:last-child {
@@ -28,7 +29,6 @@ li:last-child {
 }
 
 a {
-  font-size: 16px;
   color: white;
   text-decoration: none;
 }
