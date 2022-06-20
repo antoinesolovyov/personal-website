@@ -3,18 +3,26 @@ import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 
-const Grid = ({ itemData }) => {
+const Grid = ({ itemData, itemType }) => {
   return (
-    <Box sx={{ margin: '20px', overflowY: 'scroll' }}>
+    <Box sx={{ overflowY: 'scroll' }}>
       <ImageList variant="masonry" cols={5} gap={20}>
         {itemData.map((item) => (
-          <ImageListItem key={item.img}>
-            <img
-              src={`${item.img}?w=400&auto=format`}
-              srcSet={`${item.img}?w=400&&auto=format&dpr=2 2x`}
-              alt={item.title}
-              loading="lazy"
-            />
+          <ImageListItem key={item.src}>
+            {itemType === 'photo'
+              ? (
+                <img
+                  src={`${item.src}?auto=format`}
+                  alt={item.title}
+                  loading="lazy"
+                />
+              ) : (
+                <video width={'100%'} controls>
+                  <source src={process.env.PUBLIC_URL + item.src + '?auto=format'} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              )
+            }
           </ImageListItem>
         ))}
       </ImageList>

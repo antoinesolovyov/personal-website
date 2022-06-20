@@ -7,12 +7,12 @@ header {
 }
 
 .logo {
-  margin-left: 20px;
+  margin-left: 40px;
   margin-right: 40px;
   font-size: 32px;
 }
 
-ul {
+nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -22,9 +22,10 @@ nav li {
   display: inline;
   margin-right: 20px;
   font-size: 16px;
+  cursor: pointer;
 }
 
-li:last-child {
+nav li:last-child {
   margin-right: 0px;
 }
 
@@ -36,5 +37,5 @@ a {
 .theme {
   font-size: 16px;
   margin-left: auto;
-  margin-right: 20px;
+  margin-right: 40px;
 }
